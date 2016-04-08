@@ -1,0 +1,863 @@
+2016-01-22 09:36:09 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'save_searches' already exists' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php:781
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(781): PDOStatement->execute()
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(260): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160120_133631_save_searches.php(16): yii\db\Migration->createTable('{{%save_searche...', Array, 'CHARACTER SET u...')
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(492): m160120_133631_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m160120_133631_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#7 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'save_searches' already exists
+The SQL being executed was: CREATE TABLE `save_searches` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`id_employee` int(11) NOT NULL,
+	`name` varchar(200) NOT NULL,
+	`query_string` text NOT NULL,
+	`created_at` datetime NOT NULL DEFAULT '2016-01-22 09:36:09'
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(791): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `s...')
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(260): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160120_133631_save_searches.php(16): yii\db\Migration->createTable('{{%save_searche...', Array, 'CHARACTER SET u...')
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(492): m160120_133631_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(129): yii\console\controllers\BaseMigrateController->migrateUp('m160120_133631_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#7 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(91): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(455): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'save_searches' already exists
+)
+
+2016-01-22 09:36:06 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'SSH_AGENT_PID' => '2006'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-xfdRbw/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'SSH_AGENT_LAUNCHER' => 'upstart'
+    'WINDOWID' => '41943052'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1949'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-xfdRbw'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-xfdRbw/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1947'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'UBUNTU_MENUPROXY' => '1'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/afzal'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-mAMeMb52S9'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/home/afzal'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1453455366.2351
+    'REQUEST_TIME' => 1453455366
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-02-02 10:11:58 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "routes".' in /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('routes', Array)
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('routes', Array)
+#2 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "routes".' in /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php:169
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('routes', Array)
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#3 {main}
+2016-02-02 10:11:58 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'SSH_AGENT_PID' => '1954'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-Ow3Qgs/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'SSH_AGENT_LAUNCHER' => 'upstart'
+    'WINDOWID' => '69206028'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1874'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-Ow3Qgs'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-Ow3Qgs/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1872'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'UBUNTU_MENUPROXY' => '1'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/afzal'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-5ImkiHD8td'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/home/afzal'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1454407918.3849
+    'REQUEST_TIME' => 1454407918
+    'argv' => [
+        0 => 'yii'
+        1 => 'routes'
+    ]
+    'argc' => 2
+]
+2016-02-02 10:12:01 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "route".' in /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('route', Array)
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('route', Array)
+#2 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "route".' in /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php:169
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('route', Array)
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#3 {main}
+2016-02-02 10:12:01 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'SSH_AGENT_PID' => '1954'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-Ow3Qgs/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'SSH_AGENT_LAUNCHER' => 'upstart'
+    'WINDOWID' => '69206028'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1874'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-Ow3Qgs'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-Ow3Qgs/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1872'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'UBUNTU_MENUPROXY' => '1'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/afzal'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-5ImkiHD8td'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/home/afzal'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1454407921.0919
+    'REQUEST_TIME' => 1454407921
+    'argv' => [
+        0 => 'yii'
+        1 => 'route'
+    ]
+    'argc' => 2
+]
+2016-02-02 10:12:47 [-][-][-][error][yii\console\Exception] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "routes".' in /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php:461
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('routes', Array)
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('routes', Array)
+#2 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\console\Exception' with message 'Unknown command "routes".' in /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php:169
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('routes', Array)
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#3 {main}
+2016-02-02 10:12:47 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'SSH_AGENT_PID' => '1954'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-Ow3Qgs/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'SSH_AGENT_LAUNCHER' => 'upstart'
+    'WINDOWID' => '69206028'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1874'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-Ow3Qgs'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-Ow3Qgs/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1872'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'UBUNTU_MENUPROXY' => '1'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'SHLVL' => '1'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/afzal'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-5ImkiHD8td'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'OLDPWD' => '/home/afzal'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1454407967.5001
+    'REQUEST_TIME' => 1454407967
+    'argv' => [
+        0 => 'yii'
+        1 => 'routes'
+    ]
+    'argc' => 2
+]
+2016-04-01 05:49:48 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'search_page'' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php:784
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(784): PDOStatement->execute()
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(313): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160212_120615_add_search_page_to_save_searches.php(10): yii\db\Migration->addColumn('save_searches', 'search_page', Object(yii\db\ColumnSchemaBuilder))
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(562): m160212_120615_add_search_page_to_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160212_120615_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#7 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'search_page'
+The SQL being executed was: ALTER TABLE `save_searches` ADD `search_page` varchar(200) NOT NULL' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `sa...')
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(313): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160212_120615_add_search_page_to_save_searches.php(10): yii\db\Migration->addColumn('save_searches', 'search_page', Object(yii\db\ColumnSchemaBuilder))
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(562): m160212_120615_add_search_page_to_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160212_120615_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#7 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'search_page'
+)
+
+2016-04-01 05:49:42 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-4BEIDa/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'WINDOWID' => '69206028'
+    'OLDPWD' => '/home/afzal'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1916'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-4BEIDa'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-4BEIDa/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1914'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'HOME' => '/home/afzal'
+    'XDG_SEAT' => 'seat0'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-LnW8PKuNdB'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1459489782.8304
+    'REQUEST_TIME' => 1459489782
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-04-01 05:59:05 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'search_page'' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php:784
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(784): PDOStatement->execute()
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(313): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160212_120615_add_search_page_to_save_searches.php(10): yii\db\Migration->addColumn('save_searches', 'search_page', Object(yii\db\ColumnSchemaBuilder))
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(562): m160212_120615_add_search_page_to_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160212_120615_...')
+#5 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(650): yii\console\controllers\BaseMigrateController->actionUp(5)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(317): yii\console\controllers\BaseMigrateController->migrateToVersion('m160401_054132')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionTo('m160401_054132_...')
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('to', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('to', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate/to', Array)
+#13 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate/to', Array)
+#14 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#16 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'search_page'
+The SQL being executed was: ALTER TABLE `save_searches` ADD `search_page` varchar(200) NOT NULL' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `sa...')
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(313): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160212_120615_add_search_page_to_save_searches.php(10): yii\db\Migration->addColumn('save_searches', 'search_page', Object(yii\db\ColumnSchemaBuilder))
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(562): m160212_120615_add_search_page_to_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160212_120615_...')
+#5 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(650): yii\console\controllers\BaseMigrateController->actionUp(5)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(317): yii\console\controllers\BaseMigrateController->migrateToVersion('m160401_054132')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionTo('m160401_054132_...')
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('to', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('to', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate/to', Array)
+#13 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate/to', Array)
+#14 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#16 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'search_page'
+)
+
+2016-04-01 05:59:03 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-4BEIDa/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'WINDOWID' => '69206028'
+    'OLDPWD' => '/home/afzal'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1916'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-4BEIDa'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-4BEIDa/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1914'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'HOME' => '/home/afzal'
+    'XDG_SEAT' => 'seat0'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-LnW8PKuNdB'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1459490343.2914
+    'REQUEST_TIME' => 1459490343
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/to'
+        2 => 'm160401_054132_create_order_status_api_log_table'
+    ]
+    'argc' => 3
+]
+2016-04-01 06:07:12 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'search_page'' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php:784
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(784): PDOStatement->execute()
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(313): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160212_120615_add_search_page_to_save_searches.php(10): yii\db\Migration->addColumn('save_searches', 'search_page', Object(yii\db\ColumnSchemaBuilder))
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(562): m160212_120615_add_search_page_to_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160212_120615_...')
+#5 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(650): yii\console\controllers\BaseMigrateController->actionUp(5)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(317): yii\console\controllers\BaseMigrateController->migrateToVersion('m160401_054132')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionTo('m160401_054132_...')
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('to', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('to', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate/to', Array)
+#13 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate/to', Array)
+#14 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#16 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'search_page'
+The SQL being executed was: ALTER TABLE `save_searches` ADD `search_page` varchar(200) NOT NULL' in /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Schema.php:628
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'ALTER TABLE `sa...')
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/db/Migration.php(313): yii\db\Command->execute()
+#2 /var/www/html/seller_oms/console/migrations/m160212_120615_add_search_page_to_save_searches.php(10): yii\db\Migration->addColumn('save_searches', 'search_page', Object(yii\db\ColumnSchemaBuilder))
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(562): m160212_120615_add_search_page_to_save_searches->up()
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m160212_120615_...')
+#5 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(650): yii\console\controllers\BaseMigrateController->actionUp(5)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(317): yii\console\controllers\BaseMigrateController->migrateToVersion('m160401_054132')
+#7 [internal function]: yii\console\controllers\BaseMigrateController->actionTo('m160401_054132_...')
+#8 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('to', Array)
+#11 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('to', Array)
+#12 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate/to', Array)
+#13 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate/to', Array)
+#14 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#15 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#16 {main}
+Additional Information:
+Array
+(
+    [0] => 42S21
+    [1] => 1060
+    [2] => Duplicate column name 'search_page'
+)
+
+2016-04-01 06:07:07 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-4BEIDa/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'WINDOWID' => '69206028'
+    'OLDPWD' => '/home/afzal'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1916'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-4BEIDa'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-4BEIDa/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1914'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'HOME' => '/home/afzal'
+    'XDG_SEAT' => 'seat0'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-LnW8PKuNdB'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1459490827.884
+    'REQUEST_TIME' => 1459490827
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/to'
+        2 => 'm160401_054132_create_order_status_api_log_table'
+    ]
+    'argc' => 3
+]
+2016-04-01 06:08:11 [-][-][-][error][yii\console\Exception] exception 'yii\console\Exception' with message 'Missing required arguments: version' in /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php:146
+Stack trace:
+#0 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/InlineAction.php(49): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#2 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Controller.php(108): yii\base\Controller->runAction('mark', Array)
+#3 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('mark', Array)
+#4 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(167): yii\base\Module->runAction('migrate/mark', Array)
+#5 /var/www/html/seller_oms/vendor/yiisoft/yii2/console/Application.php(143): yii\console\Application->runAction('migrate/mark', Array)
+#6 /var/www/html/seller_oms/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/html/seller_oms/yii(27): yii\base\Application->run()
+#8 {main}
+2016-04-01 06:08:11 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'SELINUX_INIT' => 'YES'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/afzal'
+    'COMP_WORDBREAKS' => ' 	
+\"\'><;|&(:'
+    'GPG_AGENT_INFO' => '/run/user/1000/keyring-4BEIDa/gpg:0:1'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'VTE_VERSION' => '3409'
+    'WINDOWID' => '69206028'
+    'OLDPWD' => '/home/afzal'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1916'
+    'GNOME_KEYRING_CONTROL' => '/run/user/1000/keyring-4BEIDa'
+    'GTK_MODULES' => 'overlay-scrollbar:unity-gtk-module'
+    'USER' => 'afzal'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring-4BEIDa/ssh'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'JOB' => 'gnome-session'
+    'PWD' => '/var/www/html/seller_oms'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => '1914'
+    'LANG' => 'en_IN'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'HOME' => '/home/afzal'
+    'XDG_SEAT' => 'seat0'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_IN:en'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'UPSTART_INSTANCE' => ''
+    'UPSTART_EVENTS' => 'started starting'
+    'LOGNAME' => 'afzal'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-LnW8PKuNdB'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => 'Unity'
+    'UPSTART_JOB' => 'unity-settings-daemon'
+    'TEXTDOMAIN' => 'im-config'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'TEXTDOMAINDIR' => '/usr/share/locale/'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/home/afzal/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1459490891.3578
+    'REQUEST_TIME' => 1459490891
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/mark'
+    ]
+    'argc' => 2
+]

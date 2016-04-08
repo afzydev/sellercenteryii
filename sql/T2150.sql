@@ -1,0 +1,1 @@
+INSERT INTO `shopdev`.`ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, `name`, `value`, `variable_type`, `date_add`, `date_upd`) VALUES (NULL, NULL, NULL, '_INVOICE_DOWNLOAD_LIMIT_', '2', 'system', '', '');

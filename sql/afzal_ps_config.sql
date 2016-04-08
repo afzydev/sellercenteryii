@@ -1,0 +1,1 @@
+INSERT INTO `shopdev`.`ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, `name`, `value`, `variable_type`, `date_add`, `date_upd`) VALUES (NULL, NULL, '2', '_NOT_SHOW_SELLER_FILTER_STATUS_', '16,32,33,3,8,17', 'system', '', ''), (NULL, NULL, '1', '_NOT_SHOW_SELLER_FILTER_STATUS_', '16,32,33,3,8,17', 'system', '', '');

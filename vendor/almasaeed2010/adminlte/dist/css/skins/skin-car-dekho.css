@@ -1,0 +1,156 @@
+/*
+ * Skin: Car Dekho Brand
+ * ---------
+ */
+.skin-car-dekho .main-header .navbar {
+  background-color: #EF5A28;
+}
+.skin-car-dekho .main-header .navbar .nav > li > a {
+  color: #ffffff;
+}
+.skin-car-dekho .main-header .navbar .nav > li > a:hover,
+.skin-car-dekho .main-header .navbar .nav > li > a:active,
+.skin-car-dekho .main-header .navbar .nav > li > a:focus,
+.skin-car-dekho .main-header .navbar .nav .open > a,
+.skin-car-dekho .main-header .navbar .nav .open > a:hover,
+.skin-car-dekho .main-header .navbar .nav .open > a:focus,
+.skin-car-dekho .main-header .navbar .nav > .active > a {
+  background: rgba(0, 0, 0, 0.1);
+  color: #f6f6f6;
+}
+.skin-car-dekho .main-header .navbar .sidebar-toggle {
+  color: #ffffff;
+}
+.skin-car-dekho .main-header .navbar .sidebar-toggle:hover {
+  color: #f6f6f6;
+  background: rgba(0, 0, 0, 0.1);
+}
+.skin-car-dekho .main-header .navbar .sidebar-toggle {
+  color: #fff;
+}
+.skin-car-dekho .main-header .navbar .sidebar-toggle:hover {
+  background-color: #d73925;
+}
+@media (max-width: 767px) {
+  .skin-car-dekho .main-header .navbar .dropdown-menu li.divider {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .skin-car-dekho .main-header .navbar .dropdown-menu li a {
+    color: #fff;
+  }
+  .skin-car-dekho .main-header .navbar .dropdown-menu li a:hover {
+    background: #d73925;
+  }
+}
+.skin-car-dekho .main-header .logo {
+  background-color: #fff;
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+}
+.skin-car-dekho .main-header .logo:hover {
+  background-color: #fff;
+}
+.skin-car-dekho .main-header li.user-header {
+  background-color: #dd4b39;
+}
+.skin-car-dekho .content-header {
+  background: transparent;
+}
+.skin-car-dekho .wrapper,
+.skin-car-dekho .main-sidebar,
+.skin-car-dekho .left-side {
+  background-color: #f9fafc;
+}
+.skin-car-dekho .content-wrapper,
+.skin-car-dekho .main-footer {
+  border-left: 1px solid #d2d6de;
+}
+.skin-car-dekho .user-panel > .info,
+.skin-car-dekho .user-panel > .info > a {
+  color: #444444;
+}
+.skin-car-dekho .sidebar-menu > li {
+  -webkit-transition: border-left-color 0.3s ease;
+  -o-transition: border-left-color 0.3s ease;
+  transition: border-left-color 0.3s ease;
+}
+.skin-car-dekho .sidebar-menu > li.header {
+  color: #848484;
+  background: #f9fafc;
+}
+.skin-car-dekho .sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+  font-weight: 600;
+}
+.skin-car-dekho .sidebar-menu > li:hover > a,
+.skin-car-dekho .sidebar-menu > li.active > a {
+  color: #000000;
+  background: #f4f4f5;
+}
+.skin-car-dekho .sidebar-menu > li.active {
+  border-left-color: #dd4b39;
+}
+.skin-car-dekho .sidebar-menu > li.active > a {
+  font-weight: 600;
+}
+.skin-car-dekho .sidebar-menu > li > .treeview-menu {
+  background: #f4f4f5;
+}
+.skin-car-dekho .sidebar a {
+  color: #444444;
+}
+.skin-car-dekho .sidebar a:hover {
+  text-decoration: none;
+}
+.skin-car-dekho .treeview-menu > li > a {
+  color: #777777;
+}
+.skin-car-dekho .treeview-menu > li.active > a,
+.skin-car-dekho .treeview-menu > li > a:hover {
+  color: #000000;
+}
+.skin-car-dekho .treeview-menu > li.active > a {
+  font-weight: 600;
+}
+.skin-car-dekho .sidebar-form {
+  border-radius: 3px;
+  border: 1px solid #d2d6de;
+  margin: 10px 10px;
+}
+.skin-car-dekho .sidebar-form input[type="text"],
+.skin-car-dekho .sidebar-form .btn {
+  box-shadow: none;
+  background-color: #fff;
+  border: 1px solid transparent;
+  height: 35px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.skin-car-dekho .sidebar-form input[type="text"] {
+  color: #666;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+}
+.skin-car-dekho .sidebar-form input[type="text"]:focus,
+.skin-car-dekho .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #fff;
+  color: #666;
+}
+.skin-car-dekho .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left-color: #fff;
+}
+.skin-car-dekho .sidebar-form .btn {
+  color: #999;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+}
+@media (min-width: 768px) {
+  .skin-car-dekho.sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
+    border-left: 1px solid #d2d6de;
+  }
+}
